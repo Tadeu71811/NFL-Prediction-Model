@@ -28,7 +28,7 @@ input_data['home_score'] = 0            # Placeholder for home score
 input_data['away_score'] = 0            # Placeholder for away score
 
 # Load the model
-loaded_model = lgb.Booster(model_file="C:/Users/Peter/Desktop/models/lgbm_model.txt")
+loaded_model = lgb.Booster(model_file="Modelpath")
 
 # Make the prediction
 pred_prob = loaded_model.predict(input_data)[0]
