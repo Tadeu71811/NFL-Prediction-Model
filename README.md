@@ -70,3 +70,38 @@ nfl-prediction-model/
    - `MYSQL_USER`
    - `MYSQL_PASSWORD`
    - `MYSQL_DATABASE`
+  
+## Usage
+1. **Data Import**:
+   Run the `import_data.py` script to pull and store data in the database:
+   ```bash
+   python data_processing/import_data.py
+   ```
+
+2. **Data Transformation**:
+   Process raw data into structured tables:
+   ```bash
+   python data_processing/transform_data.py
+   ```
+
+3. **Model Training**:
+   Train models on the processed data:
+   ```bash
+   python model_training/tabnet_training.py
+   python model_training/lightgbm_training.py
+   ```
+
+4. **Prediction**:
+   Use the `predict.py` script to generate predictions:
+   ```bash
+   python app/predict.py
+   ```
+
+---
+
+## Recommendations
+1. Regularly update data using nfl_data_py to ensure predictions remain accurate.
+2. Expand the feature set by incorporating more columns from `league_weekly_stats` and `win_totals`.
+3. Optimize machine learning models with hyperparameter tuning (e.g., using Optuna).
+4. Add a visualization layer for better analysis of predictions.
+
